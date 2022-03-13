@@ -1,0 +1,3 @@
+*.ini
+*.session
+__pycache__/
