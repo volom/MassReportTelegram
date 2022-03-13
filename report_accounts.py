@@ -11,7 +11,8 @@ from telethon import errors
 import random
 import time
 
-ACCOUNTS = set(map(lambda x: x.replace('\n', ''), list(open("target_accounts.txt"))))
+ACCOUNTS = map(lambda x: x.replace('\n', ''), list(open("target_accounts.txt")))
+ACCOUNTS = list(dict.fromkeys(ACCOUNTS))
 
 # Enter messages for report
 MESSAGES = [
